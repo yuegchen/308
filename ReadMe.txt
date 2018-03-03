@@ -3,7 +3,7 @@ CSE308
 
 
 
-Dog3
+Dog1
 
 
 
