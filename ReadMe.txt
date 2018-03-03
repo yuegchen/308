@@ -1,6 +1,7 @@
 CSE308
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 Dog1
 
