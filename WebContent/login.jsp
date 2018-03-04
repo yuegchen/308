@@ -29,12 +29,15 @@ function Feedback_onclick() {
 function About_onclick() {
         window.open("about.jsp","_self");
 }
+function Index_onclick() {
+        window.open("index.jsp","_self");
+}
 // ]]>
 </script>
 </head>
 <div class="w3-bar w3-white w3-large">
   
-  	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit"><i class="w3-margin-right"></i> DogOwner</button>
+  	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit" onclick="return Index_onclick()"><i class="w3-margin-right"></i> DogOwner</button>
     <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
     <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
   
