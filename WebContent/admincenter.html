@@ -18,22 +18,41 @@
          crossorigin=""></script>
       <!-- My CSS -->
    </head>
+   <script language="javascript" type="text/javascript">
+   // <!CDATA[
+
+   function About_onclick() {
+      window.open("about.jsp","_self");
+   }
+   function Index_onclick() {
+       window.open("index.jsp","_self");
+   }
+   function Button3_onclick() {
+       window.open("register.jsp","_self");
+   }
+
+   // ]]>
+   </script>
    <body>
    	<div class="w3-bar w3-white w3-large">
-         <form action="" >
+         
             <button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit"><i class="w3-margin-right"></i> DogOwners</button>
-            <a href="#Help" class="w3-bar-item w3-button w3-mobile">Help</a>
-            <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
-	         <form action="index2.html" >
+            <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
+            <form action="index.jsp" >
+               <input type="hidden" name="login" value="-">
+               <button class="fa fa-times-circle-o w3-bar-item w3-button w3-right  w3-mobile" type="submit" ><i class="w3-margin-right"></i> </button>
+            </form>
+	         <!-- <form action="index2.html" >
 	            <button class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" type="submit"><i class="w3-margin-right"></i>
-                  <div>
-                     <img src="dog.jpg" alt="Avatar" style="width:25px;height:25px;" class="little-profile">
 
+                  <div class="user-pic-name">
+                     <img src="dog.jpg" alt="Avatar" style="width:25px;height:25px;" class="little-profile">
+                     Cheng Ji
                   </div>
                   
                </button>
-	         </form>
-         </form>
+	         </form> -->
+         
       </div>
    	<div class="box">
    		<!-- Start Left Column -->
@@ -41,8 +60,17 @@
             <div class="w3-white w3-text-grey w3-card-4">
                <div class="w3-display-container">
                   <img src="dog.jpg" style="width:100%" alt="Avatar">
-                  <div class="w3-display-bottomleft w3-container w3-text-black">
-                     <h2></h2>
+                  <div class="w3-display-topleft w3-container w3-text-white">
+                     <h2>Cheng Ji</h2>
+                  </div>
+                  <div class="w3-container">
+                     <p><i class="fa fa-id-card-o fa-fw w3-margin-right w3-large w3-text-teal"></i>ID</p >
+                     <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Customer</p >
+                     <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Address</p >
+                     <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>CreationDate</p >
+                     <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Email</p > 
+                     <p><i class="fa fa-mobile-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Phone</p >
+                     <p><i class=" fa fa-star fa-fw w3-margin-right w3-large w3-text-teal"></i>Rating</p >
                   </div>
                </div> 
             </div><br>

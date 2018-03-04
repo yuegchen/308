@@ -15,10 +15,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
 // <!CDATA[
 
 function Button1_onclick() {
-	window.open("UserCenter.jsp","_self");
+	window.open("UserCenter.html","_self");
 }
 function Button2_onclick() {
-    window.open("AdminCenter.jsp","_self");
+    window.open("admincenter.html","_self");
 }
 function Button3_onclick() {
     window.open("register.jsp","_self");
@@ -41,17 +41,12 @@ function Button3_onclick() {
 
         <span style="font-size: 10pt">User ID :</span>
         <input id="Text1" name="login" type="text" />
-        &nbsp; <span style="font-size: 10pt">Password:</span>
+        <span style="font-size: 10pt">Password:</span>
         <input id="Password1" name="userpasswd" type="password" />
-        &nbsp;
-        
-        &nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input id="Button1" style="width: 70px" type="button" value="User" onclick="return Button1_onclick()" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input id="Button1" style="width: 70px" type="button" value="Admin" onclick="return Button2_onclick()" />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input id="Button2" style="width: 70px" type="button" value="Register" onclick="return Button3_onclick()" /><br />
+        <br />
+        <input id="Button1" style="width: 70px; margin-top: 15px; margin-right: 10px;" type="button" value="User" onclick="return Button1_onclick()" />
+        <input id="Button1" style="width: 70px; margin-right: 10px;" type="button" value="Admin" onclick="return Button2_onclick()" />
+        <input id="Button2" style="width: 76px" type="button" value="Register" onclick="return Button3_onclick()" /><br />
         <br />
         </form>
         

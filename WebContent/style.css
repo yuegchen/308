@@ -14,8 +14,13 @@ html, body {
 .little-profile {
     border-radius: 50%;
 }
-
-
+.user-pic-name {
+    float: left;
+    display: block;
+}
+.about-photos {
+    margin-left: 300px;
+}
 
 /*Set width and height of map*/
 #mapid { 
