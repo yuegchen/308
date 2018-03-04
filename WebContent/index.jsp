@@ -30,6 +30,9 @@
 	function Button3_onclick() {
 	    window.open("register.jsp","_self");
 	}
+	function Feedback_onclick() {
+	    window.open("feedback.jsp","_self");
+	}
 
 	// ]]>
 	</script>
@@ -39,6 +42,7 @@
             <button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit" onclick="return Index_onclick()"><i class="w3-margin-right"></i> DogOwners</button>
             
             <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
+            <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
 	         <form action="login.jsp" >
 	            <button class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" type="submit"><i class="w3-margin-right"></i> Login/Register</button>
 	         </form>

@@ -23,14 +23,21 @@ function Button2_onclick() {
 function Button3_onclick() {
     window.open("register.jsp","_self");
 }
-
+function Feedback_onclick() {
+        window.open("feedback.jsp","_self");
+}
+function About_onclick() {
+        window.open("about.jsp","_self");
+}
 // ]]>
 </script>
 </head>
 <div class="w3-bar w3-white w3-large">
-  <form action="index.html" >
+  
   	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit"><i class="w3-margin-right"></i> DogOwner</button>
-  </form>
+    <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
+    <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
+  
   </div>
 <body style="font-size: 12pt; text-align: center" bgcolor="LightYellow">
         <br />

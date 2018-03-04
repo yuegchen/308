@@ -139,6 +139,7 @@ hr {
   <input type="hidden" name="login" value="-">
   	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit" onclick="return Index_onclick()"><i class="w3-margin-right"></i> DogOwner</button>
     <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
+    <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
   
   
  
@@ -165,6 +166,9 @@ function About_onclick() {
 }
 function Index_onclick() {
     window.open("index.jsp","_self");
+}
+function Feedback_onclick() {
+    window.open("feedback.jsp","_self");
 }
 
 // ]]>

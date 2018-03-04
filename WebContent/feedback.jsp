@@ -142,12 +142,12 @@ hr {
 	  
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-large">
-  <form action="index.html" >
+  
   <input type="hidden" name="login" value="-">
-  	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit"><i class="w3-margin-right"></i> DogOwner</button>
-    <a href="#Help" class="w3-bar-item w3-button w3-mobile">Help</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
-  </form>
+  	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit" onclick="return Button1_onclick()"><i class="w3-margin-right"></i> DogOwner</button>
+    <!-- <a href="#Help" class="w3-bar-item w3-button w3-mobile">Help</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a> -->
+  
   
  
  <!-- <form action="index.html" >
@@ -160,7 +160,7 @@ hr {
 // <!CDATA[
 
 function Button1_onclick() {
-  window.open("index.html","_self");
+  window.open("index.jsp","_self");
 }
 function Button2_onclick() {
     window.open("admincenter.html","_self");

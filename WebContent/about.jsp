@@ -30,6 +30,9 @@
    function Button3_onclick() {
        window.open("register.jsp","_self");
    }
+   function Feedback_onclick() {
+       window.open("feedback.jsp","_self");
+   }
 
    // ]]>
    </script>
@@ -37,15 +40,19 @@
    	<div class="w3-bar w3-white w3-large">
          
             <button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit" onclick="return Index_onclick()"><i class="w3-margin-right"></i>DogOwners</button>
+            <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
+            <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
             <!-- <a href="#Help" class="w3-bar-item w3-button w3-mobile">Help</a>
             <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a> -->
-	         <form action="index2.html" >
-	            <button class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" type="submit"><i class="w3-margin-right"></i>
+	         <form action="index.jsp" >
+	            <!-- <button class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" type="submit"><i class="w3-margin-right"></i>
                   <div class="user-pic-name">
                      <img src="dog.jpg" alt="Avatar" style="width:25px;height:25px;" class="little-profile">
                      Cheng Ji
                   </div>
-               </button>
+
+               </button> -->
+               <button class="fa fa-times-circle-o w3-bar-item w3-button w3-right  w3-mobile" type="submit" ><i class="w3-margin-right"></i> </button>
 	         </form>
          
       </div>
