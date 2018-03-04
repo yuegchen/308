@@ -52,11 +52,29 @@
    		<div class="left"><div id="mapid"></div></div>
    		<div class="right">
 				<div class="tab_select">
+					<button class="tab_button" onclick="setMode(event, 'redistricting')">Auto Redistricting</button>
 	  				<button class="tab_button" onclick="setMode(event, 'manual')">Manual Editing</button>
 	  				<button class="tab_button" onclick="setMode(event, 'compare')">Comparison</button>
 	  				<button class="tab_button" onclick="setMode(event, 'visualize')">Visualization</button>
 				</div>
-	 
+	 			
+				<div id="redistricting" class="panel_content">
+					<h3>Automatic Redistricting</h3>
+					<p>Automatically generate a redistricting plan based on user's focus</p> 
+					<hr>
+					<div id="redistrict_container">
+	  					<select>
+						  <option value="compactness">Compactness</option>
+						  <option value="population">Population</option>
+						  <option value="contiguity">Contiguity</option>
+						  <option value="party">Partisan Fairness</option>
+						  <option value="race">Racial Fairness</option>
+						</select>
+						<button class="tab_button" onclick="setMode(event, '')">Generate</button>
+	  				</div>
+
+				</div>
+
 				<div id="manual" class="panel_content">
 	  				<h3>Manual Editing</h3>
 	  				<p>Select a district, then click on the precincts you wish to assign it to.</p>
@@ -75,6 +93,7 @@
 					<h3>Visualization</h3>
 					<p>You will be able to view districts by party affiliation, socioeconomic category, and population here.</p>
 				</div>
+
 			</div>
 		</div>
 		<footer class="w3-padding-32 w3-white w3-center w3-margin-top">
