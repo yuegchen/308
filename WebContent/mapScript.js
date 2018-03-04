@@ -23,6 +23,7 @@ gopVote_NAME = "Republican Vote";
 demVote_NAME = "Democrat Vote";
 precinctID_NAME = "Precinct ID";
 precinctOrigDist_NAME = "Original District";
+panel_width = 300;
 
 // This varies by geoJSON file. It could be added to each of them as a property. Given that their formats may differ slightly, it may be easier to alter the formats. We can do this once
 // more states are loaded
@@ -32,13 +33,46 @@ precinctIDString_GEO = "PrecinctID";
 
 // Session setting variables (hard - coded for now)
 getColor = getColor_District; // Will need to reload style after changing
-selectedDistrict = 1;
+selectedDistrict = -1;
 
 // GLOBAL VARIABLES
 var precinctData = {};
 var precinctDistricts = {}; // A dictionary that maps precinct ID to district number
 var geojson;
 
+// ==============================================================================
+// ===== START OF UI PANEL FUNCTIONS ============================================
+// ==============================================================================
+
+// Returns a dictionary mapping district numbers to colors.
+function getDistrictColors() {
+	var toReturn = {};
+
+	var districts = Object.values(precinctDistricts);
+	for (var i = 0; i < districts.length; i++){
+		var cur_dist = districts[i];
+		if (cur_dist != null && toReturn[cur_dist] == undefined) {
+			toReturn[cur_dist] = districtColors[cur_dist - 1];
+		}
+	}
+	return toReturn;
+}
+
+// ==============================================================================
+// ===== END OF UI PANEL FUNCTIONS ==============================================
+// ==============================================================================
+function panelSelectDistrict(district) {
+    setSelectedDistrict(district);
+
+    // Mark active button
+    buttons_list = document.getElementsByClassName("select_button");
+    for (i = 0; i < buttons_list.length; i++) {
+        buttons_list[i].className = buttons_list[i].className.replace(" active", "");
+    }
+
+    document.getElementById("dsb" + district).className += " active";
+    console.log(document.getElementById("dsb" + district).className);
+}
 // ==============================================================================
 // ===== START OF NON - LEAFLET FUNCTIONS =======================================
 // ==============================================================================
@@ -130,7 +164,7 @@ function setSelectedDistrict(district) {
 
 var myMap = L.map('mapid', {
 	attributionControl: false
-}).setView([39.756214, -104.994031], 5);
+}).setView([39.756214, -100.994031], 4);
 
 // Add an info control
 var info = L.control({position: 'bottomright'});
@@ -173,8 +207,10 @@ function resetHighlight(e) {
 
 function onClickFeature(e) {
 	//myMap.fitBounds(e.target.getBounds());
-	var targetID = e.target.feature.properties[precinctIDString_GEO];
-	setPrecinctDistrict(targetID, selectedDistrict);
+	if (selectedDistrict != -1) {
+		var targetID = e.target.feature.properties[precinctIDString_GEO];
+		setPrecinctDistrict(targetID, selectedDistrict);
+	}
 }
 
 function onEachFeature(feature, layer) {
