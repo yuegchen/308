@@ -221,6 +221,7 @@ function onEachFeature(feature, layer) {
 	});
 }
 
+
 geojson = L.geoJSON(geojsonData, {
 	style: style, 
 	onEachFeature: onEachFeature
@@ -241,6 +242,26 @@ info.update = function (props) {
 
 info.addTo(myMap);
 
+ var resetControl = L.Control.extend({
+     options: {
+         position: 'topright'
+     },
+
+     onAdd: function (map) {
+         // create the control container with a particular class name
+         var container = L.DomUtil.create('div', 'my-custom-control');
+         resetButton = L.DomUtil.create('button', 'reset', container);
+         resetButton.textContent = "Reset";
+         resetButton.onclick = function(){
+         	alert("Reset!");
+         };
+         // ... initialize other DOM elements, add listeners, etc.
+
+         return container;
+     }
+ });
+
+ myMap.addControl(new resetControl());
 // ==============================================================================
 // ===== END OF LEAFLET INITIALIZATION ==========================================
 // ==============================================================================

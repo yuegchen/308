@@ -63,14 +63,12 @@
 					<p>Automatically generate a redistricting plan based on user's focus</p> 
 					<hr>
 					<div id="redistrict_container">
-	  					<select>
-						  <option value="compactness">Compactness</option>
-						  <option value="population">Population</option>
-						  <option value="contiguity">Contiguity</option>
-						  <option value="party">Partisan Fairness</option>
-						  <option value="race">Racial Fairness</option>
-						</select>
-						<button class="tab_button" onclick="setMode(event, '')">Generate</button>
+						<p>Compactness: </p><input type="range" min="1" max="100" value="50" class="slider" id="compactness">
+						<p>Population: </p><input type="range" min="1" max="100" value="50" class="slider" id="population">
+						<p>Contiguity: </p><input type="range" min="1" max="100" value="50" class="slider" id="contiguity">
+						<p>Partisan Fairness: </p><input type="range" min="1" max="100" value="50" class="slider" id="partisan">
+						<p>Racial Fairness: </p><input type="range" min="1" max="100" value="50" class="slider" id="racial">
+						<button style="margin: 15px auto; display:block;" class="tab_button" onclick="setMode(event, '')">Generate</button>
 	  				</div>
 
 				</div>
