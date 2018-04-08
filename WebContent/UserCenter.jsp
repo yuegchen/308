@@ -63,13 +63,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           </div>
         </div>
      <div class="w3-container">
-          <p><i class="fa fa-id-card-o fa-fw w3-margin-right w3-large w3-text-teal"></i>ID</p>
+          <p><i class="fa fa-id-card-o fa-fw w3-margin-right w3-large w3-text-teal"></i>ID:  110142667</p>
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Customer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Address</p>
-          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>CreationDate</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Email</p>	
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Address:	64 Christian Ave</p>
+          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>CreationDate:	04-08-2018</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Email:	yuege.chen@yahoo.com</p>	
           
-          <p><i class="fa fa-mobile-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Phone</p>
+          <p><i class="fa fa-mobile-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Phone:	8622600131</p>
           
          
         

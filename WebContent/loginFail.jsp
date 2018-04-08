@@ -22,7 +22,7 @@ function Button1_onclick() {
 		//session.setAttribute("User","yes" ); 
 		javascript:myForm.submit();
 	}
-	//window.open("UserCenter.jsp","_self");
+	//window.open("UserCenter.html","_self");
 }
 function Button2_onclick() {
 	if(document.myForm.login.value == ""||document.myForm.userpasswd.value == ""){
@@ -60,7 +60,9 @@ function Index_onclick() {
         <br />
         <img src="dog.jpg" width="1200" height="600"/><br />
         <br />
-        
+        <div class="w3-text-red">
+      	Incorrect Username or Password! Try again
+      	</div>
         <form name="myForm" action="login" method="post">
 
         <span style="font-size: 10pt">Email :</span>

@@ -13,5 +13,18 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/EclipseLink 2.5.2">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+			<attribute name="owner.project.facets" value="jpt.jpa"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.persistence_2.2.0.v201708071007.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.persistence.source_2.2.0.v201708071007.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-8.0.8-dmr.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen.source_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpars_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpars.source_2.7.1.v20171221-bd47e8f.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
