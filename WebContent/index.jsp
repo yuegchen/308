@@ -35,6 +35,9 @@
 	}
 
 	// ]]>
+	<%
+	String username=(String)request.getSession().getAttribute("uname");
+      %>
 	</script>
    <body>
    	<div class="w3-bar w3-white w3-large">
@@ -43,10 +46,16 @@
             
             <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
             <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
+	     <%if (username==null){ %>
 	         <form action="login.jsp" >
 	            <button class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" type="submit"><i class="w3-margin-right"></i> Login/Register</button>
 	         </form>
-         
+         <%}else{ %>
+         	<form action="UserCenter.jsp" >
+ 				<input type="hidden" name="login" value=<%=username%>>
+  				<button class="fa fa-user fa-fw w3-bar-item w3-button w3-right  w3-mobile" type="submit"><i class="w3-margin-right"></i> <%=username%></button>
+  			</form>
+         		<%} %>
       </div>
    	<div class="box">
    		<div class="left"><div id="mapid"></div></div>

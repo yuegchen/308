@@ -220,9 +220,11 @@ function Feedback_onclick() {
               <label for="email"><b>Email</b></label>
               <input type="text" placeholder="Enter Email" name="email" required>
 
-              <label for="email"><b>User ID</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-
+              <label for="name"><b>Your name</b></label>
+              <input type="text" placeholder="Enter your name" name="email" required>
+				
+			  <label for="address"><b>Your name</b></label>
+              <input type="text" placeholder="Enter your address" name="email" required>
 
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw" required>

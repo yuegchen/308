@@ -17,9 +17,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   function About_onclick() {
     window.open("about.jsp","_self");
   }
-  function Index_onclick() {
-      window.open("index.jsp","_self");
-  }
   function Button3_onclick() {
       window.open("register.jsp","_self");
   }
@@ -38,12 +35,18 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   	<button class="w3-bar-item w3-button w3-yellow w3-mobile" type="submit" onclick="return Index_onclick()"><i class="w3-margin-right"></i> DogOwner</button>
     <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
     <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
-    <button class="fa fa-times-circle-o w3-bar-item w3-button w3-right  w3-mobile" type="submit" onclick="return Index_onclick()"><i class="w3-margin-right"></i> </button>
-  
+   	<form action="logout" >
+    	<button class="fa fa-times-circle-o w3-bar-item w3-button w3-right  w3-mobile" type="submit" onclick="logout"><i class="w3-margin-right"></i> </button>
+  	</form>
   <!-- <a href="#Help" class="w3-bar-item w3-button w3-mobile">Help</a>
   <a href="#contact" class="w3-bar-item w3-button w3-mobile">Contact</a> -->
  
- 
+ <%
+	String username=(String)request.getSession().getAttribute("uname");
+ 	String email=(String)request.getSession().getAttribute("email");
+	String address=(String)request.getSession().getAttribute("address");
+	String phone=(String)request.getSession().getAttribute("phone");
+%>
 
 </div>
 <!-- Page Container -->
@@ -59,17 +62,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <div class="w3-display-container">
           <img src="dog.jpg" style="width:100%" alt="Avatar">
           <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Yuege Chen</h2>
+            <h2><%=username %></h2>
           </div>
         </div>
      <div class="w3-container">
-          <p><i class="fa fa-id-card-o fa-fw w3-margin-right w3-large w3-text-teal"></i>ID:  110142667</p>
           <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Customer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Address:	64 Christian Ave</p>
-          <p><i class="fa fa-calendar fa-fw w3-margin-right w3-large w3-text-teal"></i>CreationDate:	04-08-2018</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Email:	yuege.chen@yahoo.com</p>	
-          
-          <p><i class="fa fa-mobile-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Phone:	8622600131</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Address:	<%=address %></p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>Email:	<%=email %></p>	
+          <p><i class="fa fa-mobile-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>Phone:	<%=phone %></p>
           
          
         
