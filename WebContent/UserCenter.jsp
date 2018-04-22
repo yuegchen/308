@@ -23,7 +23,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   function Feedback_onclick() {
       window.open("feedback.jsp","_self");
   }
-
+  function Index_onclick() {
+      window.open("index.jsp","_self");
+  }
   // ]]>
   </script>
 <body class="w3-light-grey">

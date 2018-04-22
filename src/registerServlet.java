@@ -24,9 +24,10 @@ public class registerServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String email = request.getParameter("email");
-		String uname = request.getParameter("uname");
-		String passwd = request.getParameter("userpasswd");
+		String uname = request.getParameter("name");
+		String passwd = request.getParameter("psw");
 		String phone = request.getParameter("phone");
+		String address = request.getParameter("address");
 
 		try {
 			EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
@@ -38,6 +39,7 @@ public class registerServlet extends HttpServlet {
 			user.setEmail(email);
 			user.setPwd(passwd);
 			user.setPhone(phone);
+			user.setAddress(address);
 			
 			entitymanager.persist(user);
 			entitymanager.getTransaction().commit();

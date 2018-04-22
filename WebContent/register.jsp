@@ -211,7 +211,7 @@ function Feedback_onclick() {
         <button class="w3-button w3-dark-grey" type="button" name="back" onclick="history.back()">Back</button>
         
         <!-- <div class="w3-responsive" style="width:700px; height:300px;overflow:auto;"> -->
-          <form action="/action_page.php" style="border:1px solid #ccc">
+          <form action="register" style="border:1px solid #ccc">
             <div class="container">
               <h1>Sign Up</h1>
               <p>Please fill in this form to create an account.</p>
@@ -221,10 +221,10 @@ function Feedback_onclick() {
               <input type="text" placeholder="Enter Email" name="email" required>
 
               <label for="name"><b>Your name</b></label>
-              <input type="text" placeholder="Enter your name" name="email" required>
+              <input type="text" placeholder="Enter your name" name="name" required>
 				
-			  <label for="address"><b>Your name</b></label>
-              <input type="text" placeholder="Enter your address" name="email" required>
+			  <label for="address"><b>Your Address</b></label>
+              <input type="text" placeholder="Enter your address" name="address" required>
 
               <label for="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw" required>
@@ -232,8 +232,8 @@ function Feedback_onclick() {
               <label for="psw-repeat"><b>Repeat Password</b></label>
               <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
 
-              <label for="email"><b>Phone</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
+              <label for="phone"><b>Phone</b></label>
+              <input type="text" placeholder="Enter Phone" name="phone" required>
 
 
               
