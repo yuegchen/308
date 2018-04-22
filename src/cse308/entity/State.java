@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
@@ -14,9 +15,9 @@ public class State {
 	@Id
 	private int stateId;
 	private String stateName;
-	private District[] districtList;
+	private int[] districtList;
 
-	public State( int sid, String stateName, District[] dList) {
+	public State( int sid, String stateName, int[] dList) {
 		this.stateId= sid;
 		this.stateName = stateName;
 		this.districtList= dList;
@@ -26,11 +27,11 @@ public class State {
 		super();
 	}
 
-	public District[] getDList() {
+	public int[] getDList() {
 		return districtList;
 	}
 
-	public void setDList(District[] dList) {
+	public void setDList(int[] dList) {
 		this.districtList=dList;
 	}
 
@@ -51,5 +52,6 @@ public class State {
 	public void setStateId(int id) {
 		this.stateId= id;
 	}
+	
 	
 }

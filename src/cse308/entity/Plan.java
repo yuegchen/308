@@ -7,6 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Date;
 @Entity
+
 @Table
 public class Plan {
 
