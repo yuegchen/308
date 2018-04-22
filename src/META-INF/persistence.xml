@@ -7,7 +7,9 @@
    
    <persistence-unit name="Eclipselink_JPA" transaction-type="RESOURCE_LOCAL">
       <class>cse308.entity.User</class>
-
+	  <class>cse308.entity.Plan</class>
+	  <class>cse308.entity.State</class>
+	  <class>cse308.entity.District</class>
       <properties>
          <property name="javax.persistence.jdbc.url" value="jdbc:mysql://mysql4.cs.stonybrook.edu:3306/yuegchen"/>
          <property name="javax.persistence.jdbc.user" value="yuegchen"/>
