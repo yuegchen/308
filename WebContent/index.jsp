@@ -120,5 +120,13 @@
 	   <script  src="MinnesotaSyntax.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
+	   <script>
+			function redistrict() 
+			{
+				 var changedState = <%= state %>;
+
+
+			}
+		</script>
    </body>
 </html>
