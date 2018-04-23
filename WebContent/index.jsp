@@ -33,8 +33,6 @@
 	function Feedback_onclick() {
 	    window.open("feedback.jsp","_self");
 	}
-
-	// ]]>
 	</script>
    <body>
    	<div class="w3-bar w3-white w3-large">
@@ -108,12 +106,20 @@
             <i class="fa fa-linkedin w3-hover-opacity"></i>
          </div>
       </footer>
-   	
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
 	   <script src="USStateBoundaries.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
+	   <script type="text/javascript">
+		function redistrict() 
+		{
+		 	var changedState = <%=plan %>;
+		 	if(changedState != null){
+		 		console.log(changedState);
+		 	}
+		}
+		</script>
    </body>
 </html>

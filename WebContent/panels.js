@@ -1,5 +1,3 @@
-function
-
 function setMode(evt, mode) {
     var i, tab_list, tab_buttons;
 
@@ -18,6 +16,7 @@ function setMode(evt, mode) {
 
     // Call the method to initialize the active tab
     switch(mode){
+        case "redistricting": xhttp.open("GET", "redistrict", true); xhttp.send(); redistrict();
         case "manual": init_manual();
         case "compare":
         case "visualize":

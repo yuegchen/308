@@ -14,6 +14,7 @@ public class District {
 	@Id
 	private int districtId;
 	private String districtName;
+	private int districtNameId;
 	private int[] precinctList;//store precincts with their id
 	private int[] borderPrecinctList;
 
@@ -24,6 +25,12 @@ public class District {
 		this.borderPrecinctList=borderPrecinctList;
 	}
 
+	public District( int did, int districtName, int[] precinctList) {
+		this.districtId= did;
+		this.districtNameId = districtNameId;
+		this.precinctList= precinctList;
+	}
+	
 	public District() {
 		super();
 	}
