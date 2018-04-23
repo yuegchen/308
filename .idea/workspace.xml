@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9471e95-15eb-4905-9e6b-f3c261254ad3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/2016Data.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/MinnesotaSyntax.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/UserCenter.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/javax.persistence.source_2.2.0.v201708071007.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/javax.persistence_2.2.0.v201708071007.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/mysql-connector-java-8.0.8-dmr.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen.source_2.7.1.v20171221-bd47e8f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen_2.7.1.v20171221-bd47e8f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/org.eclipse.persistence.jpars.source_2.7.1.v20171221-bd47e8f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/lib/org.eclipse.persistence.jpars_2.7.1.v20171221-bd47e8f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/about.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/admincenter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/dog.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/error.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/feedback.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/loadData.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/loginFail.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/mapScript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/panels.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/register.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/tabs.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +17,8 @@
       <file leaf-file-name="loginServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/loginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+            <state relative-caret-position="-38">
+              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,8 +50,10 @@
         <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-              <folding />
+              <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <folding>
+                <marker date="1524432394790" expanded="true" signature="555:1073" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,6 +76,13 @@
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/loginServlet.java" />
+      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
@@ -358,7 +341,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1524432394790" expanded="true" signature="555:1073" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -384,7 +369,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1524432394790" expanded="true" signature="555:1073" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -418,7 +405,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1524432394790" expanded="true" signature="555:1073" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -436,15 +425,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
+          <folding>
+            <marker date="1524432394790" expanded="true" signature="555:1073" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding />
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <marker date="1524432394790" expanded="true" signature="555:1073" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -474,8 +467,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/loginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        <state relative-caret-position="-38">
+          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
