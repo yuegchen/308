@@ -75,3 +75,4 @@ public class User {
 		return "User [email=" + email + ", uname=" + uname + "]";
 	}
 }
+
