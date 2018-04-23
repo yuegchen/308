@@ -118,7 +118,9 @@
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
+	   <script src="USStateBoundaries.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
+
    </body>
 </html>
