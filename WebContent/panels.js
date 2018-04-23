@@ -1,3 +1,5 @@
+function
+
 function setMode(evt, mode) {
     var i, tab_list, tab_buttons;
 

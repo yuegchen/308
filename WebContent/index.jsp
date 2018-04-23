@@ -51,6 +51,9 @@
    	<div class="box">
    		<div class="left"><div id="mapid"></div></div>
    		<div class="right">
+   				<div>
+   					
+   				</div>
 				<div class="tab_select">
 					<button class="tab_button" onclick="setMode(event, 'redistricting')">Auto Redistricting</button>
 	  				<button class="tab_button" onclick="setMode(event, 'manual')">Manual Editing</button>
@@ -108,6 +111,7 @@
    	
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
+	   <script src="USStateBoundaries.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
