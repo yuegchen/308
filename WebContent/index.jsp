@@ -1,3 +1,4 @@
+<%@ page import="cse308.entity.*" %>
 <html>
    <head>
       <title>CSE308</title>
@@ -37,6 +38,7 @@
 	// ]]>
 	<%
 	String username=(String)request.getSession().getAttribute("uname");
+	Plan p=new Plan();
       %>
 	</script>
    <body>

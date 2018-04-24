@@ -21,7 +21,9 @@ public class Feedback {
 		this.detail = detail;
 	}	
 	
-	
+	public Feedback(){
+		super();
+	}
 	
 	public String getEmail() {
 		return email;

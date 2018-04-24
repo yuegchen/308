@@ -13,17 +13,16 @@ public class District {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
 	private int districtId;
-//	private String districtName;
 	private int originalDistrictId;
 	private int[] movedIntoPrecinctList;//store precincts with their id
-//	private int[] movedOutPrecinctList;
+	private int[] borderPrecinctList;
+	private District[] neighborDistricts;
 
-	public District( int did, int oDid, int[] inprecinctList) {
+	public District( int did, int oDid, int[] inprecinctList, int[] borderPrecinctList) {
 		this.districtId= did;
 		this.originalDistrictId=oDid;
-//		this.districtName = districtName;
 		this.movedIntoPrecinctList= inprecinctList;
-//		this.movedOutPrecinctList=outPrecinctList;
+		this.borderPrecinctList=borderPrecinctList;
 	}
 
 	public District() {
@@ -38,22 +37,21 @@ public class District {
 		this.movedIntoPrecinctList=pList;
 	}
 	
-//	public int[] getOutPList() {
-//		return movedOutPrecinctList;
-//	}
-//
-//	public void setOutPList(int[] BPList) {
-//		this.movedOutPrecinctList=BPList;
-//	}
+	public District[] getNeighborDistricts(){
+		return neighborDistricts;
+	}
+	
+	public void setNeighborDistricts(District[] neighborDistricts){
+		this.neighborDistricts=neighborDistricts;
+	}
+	
+	public int[] getBorderPrecinctList() {
+		return borderPrecinctList;
+	}
 
-//
-//	public String getDName() {
-//		return districtName;
-//	}
-//
-//	public void setDName(String d) {
-//		this.districtName= d;
-//	}
+	public void setBorderPrecinctList(int[] BPList) {
+		this.borderPrecinctList=BPList;
+	}
 
 	public int getDId() {
 		return districtId;
