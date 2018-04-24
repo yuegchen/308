@@ -1,17 +1,17 @@
-import cse308.entity.*;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
-import cse308.entity.User;
+import cse308.entity.*;
+import com.google.gson.Gson;
 
 public class redistrictServlet extends HttpServlet {
 
@@ -20,15 +20,6 @@ public class redistrictServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * 
-	 */
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-		this.doPost(request, response);
-	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -48,12 +39,24 @@ public class redistrictServlet extends HttpServlet {
 			District d7=new District(17,7,null);
 			District d8=new District(18,8,null);
 			State s=new State(11,"Minnesota",new District[]{d1,d2,d3,d4,d5,d6,d7,d8});
-			Plan p = new Plan(1,new Date(),"Minnesota",11);
-			request.getSession().setAttribute("plan", p);
-			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/index.jsp");
+			Plan plan = new Plan(1,LocalDateTime.now().toString(),"Minnesota",s,"yuege.chen@yahoo.com");
+			
+			sendJsonObject(plan,  response);
+			
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private void sendJsonObject(Plan plan, HttpServletResponse response) throws IOException{
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("plan", plan);
+		
+		Gson gson = new Gson();
+		
+		response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+		response.getWriter().write(gson.toJson(map));
 	}
 }

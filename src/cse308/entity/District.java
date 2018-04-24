@@ -25,7 +25,7 @@ public class District {
 		this.borderPrecinctList=borderPrecinctList;
 	}
 
-	public District( int did, int districtName, int[] precinctList) {
+	public District( int did, int districtNameId, int[] precinctList) {
 		this.districtId= did;
 		this.districtNameId = districtNameId;
 		this.precinctList= precinctList;

@@ -21,6 +21,12 @@
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpa.modelgen.source_2.7.1.v20171221-bd47e8f.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpars_2.7.1.v20171221-bd47e8f.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/org.eclipse.persistence.jpars.source_2.7.1.v20171221-bd47e8f.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/chens/Documents/GitHub/308/gson-2.6.2.jar" sourcepath="C:/Users/chens/Documents/GitHub/308/gson-2.6.2-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/chens/Documents/GitHub/308/gson-2.6.2-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/gson-2.6.2.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_162"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

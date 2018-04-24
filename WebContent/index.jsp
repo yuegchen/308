@@ -5,6 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="tabs.css"/>
       <!-- Leaflet CSS -->
@@ -21,18 +22,18 @@
    <script language="javascript" type="text/javascript">
 	// <!CDATA[
 
-	function About_onclick() {
-		window.open("about.jsp","_self");
-	}
-	function Index_onclick() {
-	    window.open("index.jsp","_self");
-	}
-	function Button3_onclick() {
-	    window.open("register.jsp","_self");
-	}
-	function Feedback_onclick() {
-	    window.open("feedback.jsp","_self");
-	}
+		function About_onclick() {
+			window.open("about.jsp","_self");
+		}
+		function Index_onclick() {
+		    window.open("index.jsp","_self");
+		}
+		function Button3_onclick() {
+		    window.open("register.jsp","_self");
+		}
+		function Feedback_onclick() {
+		    window.open("feedback.jsp","_self");
+		}
 	</script>
    <body>
    	<div class="w3-bar w3-white w3-large">
@@ -50,7 +51,7 @@
    		<div class="left"><div id="mapid"></div></div>
    		<div class="right">
    				<div>
-   					
+   					<select id="select"></select>
    				</div>
 				<div class="tab_select">
 					<button class="tab_button" onclick="setMode(event, 'redistricting')">Auto Redistricting</button>
@@ -109,17 +110,9 @@
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
 	   <script src="USStateBoundaries.js"></script>
+	   <script src="AvailableStateBoundaries.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
-	   <script type="text/javascript">
-		function redistrict() 
-		{
-		 	var changedState = <%=plan %>;
-		 	if(changedState != null){
-		 		console.log(changedState);
-		 	}
-		}
-		</script>
-   </body>
+	   </body>
 </html>
