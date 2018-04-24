@@ -12,19 +12,10 @@ import javax.persistence.Persistence;
 
 public class logoutServlet extends HttpServlet {
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		this.doPost(request, response);
 	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
-
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			request.getSession().setAttribute("email", null);
 			request.getSession().setAttribute("uname", null);
@@ -33,7 +24,6 @@ public class logoutServlet extends HttpServlet {
 			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/index.jsp");
 			dispatcher.forward(request, response);
 		}
-
 		catch (Exception e) {
 			e.printStackTrace();
 		}
