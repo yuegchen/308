@@ -12,20 +12,20 @@ public class User {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private String email;
-	private String uname;
-	private String address;
-	private String password;
-	private String phone;
+	private	String 	email;
+	private String 	uname;
+	private String 	address;
+	private String 	password;
+	private String 	phone;
 
 	public User( String uname, String email, String passwd, String phone, String address) {
-		this.password = passwd;
-		this.uname = uname;
-		this.email = email;
-		this.phone = phone;
-		this.address=address;
-	}
-
+		this.password 	=	passwd;
+		this.uname 		= 	uname;
+		this.email 		= 	email;
+		this.phone 		= 	phone;
+		this.address 	= 	address;
+	}	
+	
 	public User() {
 		super();
 	}
@@ -68,10 +68,10 @@ public class User {
 	public void setAddress(String a) {
 		this.address = a;
 	}
-
 	//
 	@Override
 	public String toString() {
 		return "User [email=" + email + ", uname=" + uname + "]";
 	}
 }
+

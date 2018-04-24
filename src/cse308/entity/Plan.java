@@ -13,18 +13,20 @@ public class Plan {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private int planId;
-	private String creationDate;
-	private String stateName;
-	private int stateId;
-	private String email;
+	private 	int 	planId;
+	private 	String 	creationDate;
+	private 	String 	stateName;
+	private 	int 	stateId;
+	private 	State 	state;
+	private 	String 	email;
 
-	public Plan( int pid, String d, String stateName, int stateId, String email) {
-		this.planId= pid;
-		this.creationDate = d;
-		this.stateName = stateName;
-		this.stateId = stateId;
-		this.email=email;
+	public Plan( int pid, String d, String stateName, int stateId, State s,String email) {
+		this.planId			= 	pid;
+		this.creationDate 	= 	d;
+		this.stateName 		= 	stateName;
+		this.stateId 		= 	stateId;
+		this.state			=	s;
+		this.email			=	email;
 	}
 
 	public Plan() {
@@ -44,7 +46,7 @@ public class Plan {
 	}
 
 	public void setCD(String d) {
-		this.creationDate= d;
+		this.creationDate = d;
 	}
 
 	public String getStateName() {
@@ -52,7 +54,7 @@ public class Plan {
 	}
 
 	public void setStateName(String s) {
-		this.stateName= s;
+		this.stateName = s;
 	}
 
 	public int getStateId() {
@@ -60,7 +62,7 @@ public class Plan {
 	}
 
 	public void setStateId(int id) {
-		this.stateId= id;
+		this.stateId = id;
 	}
 	
 	public String getEmail() {

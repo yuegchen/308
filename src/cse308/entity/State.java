@@ -4,23 +4,23 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 @Entity
 @Table
 public class State {
-
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private int stateId;
-	private String stateName;
-	private int[] districtList;
-
-	public State( int sid, String stateName, int[] dList) {
-		this.stateId= sid;
-		this.stateName = stateName;
-		this.districtList= dList;
+	private 	int 		stateId;
+	private 	String 		stateName;
+	private 	int[] 		districtList;
+	private 	District[] 	dList;
+	
+	public State( int sid, String stateName, int[] dList, District[] dl) {
+		this.stateId		= 	sid;
+		this.stateName 		= 	stateName;
+		this.districtList	= 	dList;
+		this.dList			=	dl;
 	}
 
 	public State() {
@@ -32,11 +32,9 @@ public class State {
 	}
 
 	public void setDList(int[] dList) {
-		this.districtList=dList;
+		this.districtList = dList;
 	}
-
-
-
+	
 	public String getStateName() {
 		return stateName;
 	}

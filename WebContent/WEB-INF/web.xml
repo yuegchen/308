@@ -35,6 +35,16 @@
    <url-pattern>/register</url-pattern>
 </servlet-mapping>
 
+<servlet>
+   <servlet-name>feedback</servlet-name>
+   <servlet-class>sendFeedback</servlet-class>
+</servlet>
+
+<servlet-mapping>
+   <servlet-name>feedback</servlet-name>
+   <url-pattern>/feedback</url-pattern>
+</servlet-mapping>
+
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>

@@ -16,13 +16,14 @@ public class Feedback {
 	private String detail;
 
 	public Feedback(String title, String email, String detail) {
-		this.title = title;
-		this.email = email;
+		this.title	= title;
+		this.email 	= email;
 		this.detail = detail;
-	}	
-	
-	
-	
+	}
+	public Feedback() {
+		super();
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -45,7 +46,6 @@ public class Feedback {
 	public void setDetail(String d) {
 		this.detail = d;
 	}
-
 	//
 	@Override
 	public String toString() {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <title>User Registration</title>
@@ -7,10 +6,23 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- Latest compiled and minified CSS -->
-
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+			    $("#feedback").submit(function(){
+			        $.ajax({
+						url: 'feedback',
+						tyle: 'POST',
+						dataType: 'json',
+						data: $('#feedback').serialize(),
+						success: function(data){
+							alert("My dog");
+						}
+			        });
+			    });
+			});
+</script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -179,21 +191,6 @@ function Button3_onclick() {
   <!-- The Grid -->
   <div class="w3-content w3-padding">
   
-    <!-- Left Column -->
-    <!-- <div class="w3-container w3-padding-32">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="dog.jpg" style="width:50%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2>Join Now</h2>
-          </div>
-        </div>
-       
-      </div><br> -->
-
-    <!-- End Left Column -->
-    <!-- </div> -->
 
     <!-- Right Column -->
     <div class="w3-container w3-padding-32">
@@ -205,17 +202,17 @@ function Button3_onclick() {
         <button class="w3-button w3-dark-grey" type="button" name="back" onclick="history.back()">Back</button>
         
         <!-- <div class="w3-responsive" style="width:700px; height:300px;overflow:auto;"> -->
-          <form action="" style="border:1px solid #ccc">
+		
+          <form id = "feedback" style="border:1px solid #ccc">
             <div class="container">
-            
               
               <hr>
 
               <label for="email"><b>Title</b></label>
-              <input type="text" placeholder="Feedback Title" name="email" required>
+              <input type="text" placeholder="Feedback Title" name="title" required>
 
               <label for="psw"><b>Detail</b></label>
-              <input class="w3-input" type="text" placeholder="Enter your feedback..." name="psw" required>
+              <input class="w3-input" type="text" placeholder="Enter your feedback..." name="detail" required>
 
               <label>
                 <input type="checkbox"  name="remember" style="margin-bottom:15px"> Send Anonymously
@@ -228,45 +225,10 @@ function Button3_onclick() {
               </div>
             </div>
           </form>
-
-  			<!-- <table class="w3-table-all">
-              <tr>
-              <th></th>
-             	 <th>Id</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Address</th>
-                <th>City</th>
-                <th>State</th>
-                <th>ZipCode</th>
-                <th>CreditCardNo</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Rating</th>
-              </tr>
-              <tr>
-              	<form action="Customer_Rep" method="post">
-              	  <input type="hidden" name="action" value="add">
-  				 <input type="hidden" name="login" value="-">
-  				 <input type="hidden" name="type" value="register">
-  				
-  				<td><button class="w3-button w3-dark-grey" type="submit" onclick="return Button1_onclick()"> Submit</button> </td>  
-               	<td><input class="w3-input w3-border" type="text"  name="cID" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cFirstName" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cLastName" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cAddress" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cCity" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cState" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cZipCode" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cCreditCardNo" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cPhone" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  name="cEmail" required style="width: 100px;"></td>
-                <td><input class="w3-input w3-border" type="text"  readonly value=1 name="cRating" required style="width: 100px;"></td>
-                     
-      			</form>
-              </tr>
-              </table> -->
-             <!--  </div> -->
+          	
+          
+          
+          
         </div>
       </div>
       <footer class="w3-padding-32 w3-white w3-center w3-margin-top">

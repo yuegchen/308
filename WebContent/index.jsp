@@ -1,3 +1,4 @@
+<%@ page import="cse308.entity.*" %>
 <html>
    <head>
       <title>CSE308</title>
@@ -37,6 +38,7 @@
 	// ]]>
 	<%
 	String username=(String)request.getSession().getAttribute("uname");
+	Plan p=new Plan();
       %>
 	</script>
    <body>
@@ -118,15 +120,8 @@
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
+	   <script src="USStateBoundaries.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
-	   <script>
-			function redistrict() 
-			{
-				 var changedState = <%= state %>;
-
-
-			}
-		</script>
    </body>
 </html>
