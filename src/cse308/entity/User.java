@@ -68,7 +68,6 @@ public class User {
 	public void setAddress(String a) {
 		this.address = a;
 	}
-
 	//
 	@Override
 	public String toString() {

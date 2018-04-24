@@ -12,17 +12,17 @@ public class District {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
-	private int districtId;
-	private int originalDistrictId;
-	private int[] movedIntoPrecinctList;//store precincts with their id
-	private int[] borderPrecinctList;
-	private District[] neighborDistricts;
+	private 	int 		districtId;
+	private 	int 		originalDistrictId;
+	private 	int[] 		movedIntoPrecinctList;//store precincts with their id
+	private 	int[] 		borderPrecinctList;
+	private 	District[] 	neighborDistricts;
 
 	public District( int did, int oDid, int[] inprecinctList, int[] borderPrecinctList) {
-		this.districtId= did;
-		this.originalDistrictId=oDid;
-		this.movedIntoPrecinctList= inprecinctList;
-		this.borderPrecinctList=borderPrecinctList;
+		this.districtId				= 	did;
+		this.originalDistrictId		=	oDid;
+		this.movedIntoPrecinctList	= 	inprecinctList;
+		this.borderPrecinctList		=	borderPrecinctList;
 	}
 
 	public District() {
