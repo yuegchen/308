@@ -1,4 +1,5 @@
 <%@ page import="cse308.entity.*" %>
+<%@ page import="java.util.Map" %>
 <html>
    <head>
       <title>CSE308</title>
@@ -6,7 +7,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="tabs.css"/>
       <!-- Leaflet CSS -->
@@ -18,12 +18,16 @@
       <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
          integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
          crossorigin=""></script>
-      <!-- My CSS -->
+      <!-- jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    </head>
    <script language="javascript" type="text/javascript">
 	// <!CDATA[
 
-
+	<%
+	String username=(String)request.getSession().getAttribute("uname");
+	Map<String, Object> map = (Map<String, Object>)request.getSession().getAttribute("plan");
+      %>
 		function About_onclick() {
 			window.open("about.jsp","_self");
 		}
@@ -54,6 +58,7 @@
   				<button class="fa fa-user fa-fw w3-bar-item w3-button w3-right  w3-mobile" type="submit"><i class="w3-margin-right"></i> <%=username%></button>
   			</form>
          		<%} %>
+         	
       </div>
    	<div class="box">
    		<div class="left"><div id="mapid"></div></div>
@@ -124,4 +129,17 @@
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
 	   </body>
+	    <%if (map!=null){%>
+		   <script type="text/javascript">
+	   		<%District[] districts = ((Plan)map.get("plan")).getState().getDistricts();
+	   		for (District district : districts) {
+	   			if(district.getPrecinctList() != null)
+		   		    for (int changedPrecinct: district.getPrecinctList()) {
+		   		    	%>setPrecinctDistrict(<%=changedPrecinct %>, <%=district.getDistrictNameId() %>); <%
+		   		    }
+	   		}%>
+	   		redraw();
+		   </script>
+	    <%}%>
+
 </html>

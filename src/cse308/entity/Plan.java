@@ -81,4 +81,7 @@ public class Plan {
 		this.email = e;
 	}
 	
+	public State getState(){
+		return state;
+	}	
 }

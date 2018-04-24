@@ -86,8 +86,8 @@ function setMode(evt, mode) {
             dataType: 'json',
             success: function(response){
                 console.log(response.plan.state);
-                var districtList = response.plan.state.districtList;
-                districtList.forEach(function(district){
+                var dList = response.plan.state.dList;
+                dList.forEach(function(district){
                     if (district.precinctList != null){
                         district.precinctList.forEach(function(changedPrecinct){
                             setPrecinctDistrict(changedPrecinct, district.districtNameId);

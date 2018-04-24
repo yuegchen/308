@@ -11,6 +11,7 @@
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script language="javascript" type="text/javascript">
   // <!CDATA[
 
@@ -24,7 +25,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       window.open("feedback.jsp","_self");
   }
   function Index_onclick() {
-      window.open("index.jsp","_self");
+	  window.open("redistrict","_self");
   }
   // ]]>
   </script>

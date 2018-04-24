@@ -78,4 +78,12 @@ public class District {
 		this.originalDistrictId= id;
 	}
 	
+	public int getDistrictNameId(){
+		return districtNameId;
+	}
+	
+	public int[] getPrecinctList(){
+		return precinctList;
+	}
+	
 }

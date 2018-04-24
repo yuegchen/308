@@ -44,11 +44,8 @@ var precinctDistricts = {}; // A dictionary that maps precinct ID to district nu
 var geojsonUS;
 var geojsonState;
 var geojsonUSLayer;
-<<<<<<< HEAD
-=======
 var geojsonStateData;
 var geojsonAvailableStateLayer;
->>>>>>> mapData
 
 // ==============================================================================
 // ===== START OF UI PANEL FUNCTIONS ============================================
@@ -194,10 +191,7 @@ function styleStateHidden(feature){
 	};
 }
 function styleStateShow(feature) {
-<<<<<<< HEAD
-=======
 	setColoring(getColor_District);
->>>>>>> mapData
 	return {
 		weight: 1,
 		opacity: 1,
@@ -215,14 +209,7 @@ function styleUS(feature){
 	};
 }
 
-<<<<<<< HEAD
-function styleUS(feature){
-	return{
-		weight: 2,
-		opacity: 1,
-		color: "white"
-	};
-=======
+
 function styleAvailableState(feature){
 	setColoring(getColor_State);
 	return {
@@ -232,8 +219,6 @@ function styleAvailableState(feature){
 		fillColor: getColor(feature.properties[stateIDString_GEO]),
 		fillOpacity: 0.5
 	}
-
->>>>>>> mapData
 }
 
 function highlightFeature(e) {
