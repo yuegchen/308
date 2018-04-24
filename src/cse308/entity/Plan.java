@@ -17,13 +17,15 @@ public class Plan {
 	private String creationDate;
 	private String stateName;
 	private int stateId;
+	private State state;
 	private String email;
 
-	public Plan( int pid, String d, String stateName, int stateId, String email) {
+	public Plan( int pid, String d, String stateName, int stateId, State s,String email) {
 		this.planId= pid;
 		this.creationDate = d;
 		this.stateName = stateName;
 		this.stateId = stateId;
+		this.state=s;
 		this.email=email;
 	}
 

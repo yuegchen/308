@@ -25,7 +25,6 @@ public class Feedback {
 	}
 	
 	
-	
 	public String getEmail() {
 		return email;
 	}
