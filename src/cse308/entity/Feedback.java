@@ -19,7 +19,10 @@ public class Feedback {
 		this.title = title;
 		this.email = email;
 		this.detail = detail;
-	}	
+	}
+	public Feedback() {
+		super();
+	}
 	
 	public Feedback(){
 		super();

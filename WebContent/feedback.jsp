@@ -205,17 +205,17 @@ function Button3_onclick() {
         <button class="w3-button w3-dark-grey" type="button" name="back" onclick="history.back()">Back</button>
         
         <!-- <div class="w3-responsive" style="width:700px; height:300px;overflow:auto;"> -->
-          <form action="" style="border:1px solid #ccc">
+          <form action="feedback" style="border:1px solid #ccc">
             <div class="container">
             
               
               <hr>
 
               <label for="email"><b>Title</b></label>
-              <input type="text" placeholder="Feedback Title" name="email" required>
+              <input type="text" placeholder="Feedback Title" name="title" required>
 
               <label for="psw"><b>Detail</b></label>
-              <input class="w3-input" type="text" placeholder="Enter your feedback..." name="psw" required>
+              <input class="w3-input" type="text" placeholder="Enter your feedback..." name="detail" required>
 
               <label>
                 <input type="checkbox"  name="remember" style="margin-bottom:15px"> Send Anonymously
@@ -224,7 +224,7 @@ function Button3_onclick() {
 
               <div class="clearfix">
                 <button type="button" class="cancelbtn" onclick="history.back()">Cancel</button>
-                <button type="submit" class="signupbtn" onclick="return Button1_onclick()">Submit</button>
+                <button type="submit" class="signupbtn" >submit</button>
               </div>
             </div>
           </form>
