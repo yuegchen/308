@@ -24,9 +24,6 @@ public class Feedback {
 		super();
 	}
 	
-	public Feedback(){
-		super();
-	}
 	
 	public String getEmail() {
 		return email;
