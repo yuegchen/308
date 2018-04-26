@@ -407,9 +407,13 @@ info.addTo(myMap);
          resetButton = L.DomUtil.create('button', 'reset', container);
          resetButton.textContent = "Reset";
          resetButton.onclick = function(){
+<<<<<<< HEAD
 	 		resetState();
 			redraw();
 
+=======
+         	alert("Reset!");
+>>>>>>> parent of 6c08db4... geo process
          };
          // ... initialize other DOM elements, add listeners, etc.
 
