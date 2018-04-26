@@ -9,7 +9,6 @@
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="tabs.css"/>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <!-- Leaflet CSS -->
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
          integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -70,7 +69,6 @@
 				<div class="tab_select">
 					<button class="tab_button" onclick="setMode(event, 'redistricting')">Auto Redistricting</button>
 	  				<button class="tab_button" onclick="setMode(event, 'manual')">Manual Editing</button>
-	  				<button class="tab_button" onclick="getMapData()">Test</button>
 	  				<button class="tab_button" onclick="setMode(event, 'compare')">Comparison</button>
 	  				<button class="tab_button" onclick="setMode(event, 'visualize')">Visualization</button>
 				</div>
@@ -130,8 +128,11 @@
 	   <script src="USStateBoundaries.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
+<<<<<<< HEAD
 
 	   <script  src="loadMapScript.js"></script>
+=======
+>>>>>>> parent of 6c08db4... geo process
 
 	   </body>
 	   
