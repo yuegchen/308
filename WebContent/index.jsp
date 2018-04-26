@@ -1,4 +1,5 @@
 <%@ page import="cse308.entity.*" %>
+<%@ page import="java.util.Map" %>
 <html>
    <head>
       <title>CSE308</title>
@@ -18,29 +19,28 @@
       <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
          integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
          crossorigin=""></script>
-      <!-- My CSS -->
+      <!-- jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    </head>
    <script language="javascript" type="text/javascript">
 	// <!CDATA[
 
-	function About_onclick() {
-		window.open("about.jsp","_self");
-	}
-	function Index_onclick() {
-	    window.open("index.jsp","_self");
-	}
-	function Button3_onclick() {
-	    window.open("register.jsp","_self");
-	}
-	function Feedback_onclick() {
-	    window.open("feedback.jsp","_self");
-	}
-
-	// ]]>
 	<%
 	String username=(String)request.getSession().getAttribute("uname");
-	Plan p=new Plan();
+	Map<String, Object> map = (Map<String, Object>)request.getSession().getAttribute("plan");
       %>
+		function About_onclick() {
+			window.open("about.jsp","_self");
+		}
+		function Index_onclick() {
+		    window.open("index.jsp","_self");
+		}
+		function Button3_onclick() {
+		    window.open("register.jsp","_self");
+		}
+		function Feedback_onclick() {
+		    window.open("feedback.jsp","_self");
+		}
 	</script>
    <body>
    	<div class="w3-bar w3-white w3-large">
@@ -59,10 +59,14 @@
   				<button class="fa fa-user fa-fw w3-bar-item w3-button w3-right  w3-mobile" type="submit"><i class="w3-margin-right"></i> <%=username%></button>
   			</form>
          		<%} %>
+         	
       </div>
    	<div class="box">
    		<div class="left"><div id="mapid"></div></div>
    		<div class="right">
+   				<div>
+   					<select id="select"></select>
+   				</div>
 				<div class="tab_select">
 					<button class="tab_button" onclick="setMode(event, 'redistricting')">Auto Redistricting</button>
 	  				<button class="tab_button" onclick="setMode(event, 'manual')">Manual Editing</button>
@@ -118,14 +122,19 @@
             <i class="fa fa-linkedin w3-hover-opacity"></i>
          </div>
       </footer>
-   	
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
+	   <script src="USStateBoundaries.js"></script>
+	   <script src="AvailableStateBoundaries.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
 	   <script src="USStateBoundaries.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
+
 	   <script  src="loadMapScript.js"></script>
 
-   </body>
+	   </body>
+	   
+
+
 </html>
