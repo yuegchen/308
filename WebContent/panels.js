@@ -1,11 +1,10 @@
-$("select").append($("<option></option>")
-        .attr("value", null));
-$.each(stateNames, function(index, value){
-    $("select").append($("<option></option>")
-        .attr("value", (index+1))
-        .text(value));
-});
-
+var stateSelect = document.getElementById("select");
+for (state in stateNames){
+    var stateOptions = document.createElement("option");
+    stateOptions.value = state;
+    stateOptions.innerHTML = state;
+    stateSelect.appendChild(stateOptions);
+}
 
 function setMode(evt, mode) {
     var i, tab_list, tab_buttons;
@@ -40,7 +39,6 @@ function setMode(evt, mode) {
     function init_manual(){
         // Make sure the map is coloring by district affiliation
         setColoring(getColor_District);
-        redraw();
 
         // Populate the div with content
         var ele = document.getElementById("district_container");
@@ -86,8 +84,8 @@ function setMode(evt, mode) {
             dataType: 'json',
             success: function(response){
                 console.log(response.plan.state);
-                var dList = response.plan.state.dList;
-                dList.forEach(function(district){
+                var districtList = response.plan.state.districtList;
+                districtList.forEach(function(district){
                     if (district.precinctList != null){
                         district.precinctList.forEach(function(changedPrecinct){
                             setPrecinctDistrict(changedPrecinct, district.districtNameId);

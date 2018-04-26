@@ -17,30 +17,12 @@
    <servlet-name>logout</servlet-name>
    <servlet-class>logoutServlet</servlet-class>
 </servlet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
- 
-<!-- Defines the path to access this Servlet -->
->>>>>>> parent of 6c08db4... geo process
-=======
- 
-<!-- Defines the path to access this Servlet -->
->>>>>>> parent of 6c08db4... geo process
-=======
- 
-<!-- Defines the path to access this Servlet -->
->>>>>>> parent of 6c08db4... geo process
 <servlet-mapping>
    <servlet-name>logout</servlet-name>
    <url-pattern>/logout</url-pattern>
 </servlet-mapping>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
  <servlet>
    <servlet-name>redistrict</servlet-name>
    <servlet-class>redistrictServlet</servlet-class>
@@ -52,29 +34,11 @@
 </servlet-mapping>  
  
 
-=======
->>>>>>> parent of 6c08db4... geo process
-=======
->>>>>>> parent of 6c08db4... geo process
-=======
->>>>>>> parent of 6c08db4... geo process
 <servlet>
    <servlet-name>register</servlet-name>
    <servlet-class>registerServlet</servlet-class>
 </servlet>
  
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<!-- Defines the path to access this Servlet -->
->>>>>>> parent of 6c08db4... geo process
-=======
-<!-- Defines the path to access this Servlet -->
->>>>>>> parent of 6c08db4... geo process
-=======
-<!-- Defines the path to access this Servlet -->
->>>>>>> parent of 6c08db4... geo process
 <servlet-mapping>
    <servlet-name>register</servlet-name>
    <url-pattern>/register</url-pattern>
@@ -89,9 +53,7 @@
    <servlet-name>feedback</servlet-name>
    <url-pattern>/feedback</url-pattern>
 </servlet-mapping>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <servlet>
    <servlet-name>loadMap</servlet-name>
    <servlet-class>loadMapServlet</servlet-class>
@@ -101,13 +63,6 @@
    <servlet-name>loadMap</servlet-name>
    <url-pattern>/loadMap</url-pattern>
 </servlet-mapping>
-
-=======
->>>>>>> parent of 6c08db4... geo process
-=======
->>>>>>> parent of 6c08db4... geo process
-=======
->>>>>>> parent of 6c08db4... geo process
 
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>

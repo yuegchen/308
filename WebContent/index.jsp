@@ -1,5 +1,4 @@
 <%@ page import="cse308.entity.*" %>
-<%@ page import="java.util.Map" %>
 <html>
    <head>
       <title>CSE308</title>
@@ -7,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="tabs.css"/>
       <!-- Leaflet CSS -->
@@ -18,16 +18,11 @@
       <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
          integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
          crossorigin=""></script>
-      <!-- jquery -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <!-- My CSS -->
    </head>
    <script language="javascript" type="text/javascript">
 	// <!CDATA[
 
-	<%
-	String username=(String)request.getSession().getAttribute("uname");
-	Map<String, Object> map = (Map<String, Object>)request.getSession().getAttribute("plan");
-      %>
 		function About_onclick() {
 			window.open("about.jsp","_self");
 		}
@@ -48,17 +43,10 @@
             
             <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return About_onclick()"><i class="w3-margin-right"></i>About Us</button>
             <button class="w3-bar-item w3-button w3-mobile" type="submit" onclick="return Feedback_onclick()"><i class="w3-margin-right"></i>Leave Feedback</button>
-	     <%if (username==null){ %>
 	         <form action="login.jsp" >
 	            <button class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" type="submit"><i class="w3-margin-right"></i> Login/Register</button>
 	         </form>
-         <%}else{ %>
-         	<form action="UserCenter.jsp" >
- 				<input type="hidden" name="login" value=<%=username%>>
-  				<button class="fa fa-user fa-fw w3-bar-item w3-button w3-right  w3-mobile" type="submit"><i class="w3-margin-right"></i> <%=username%></button>
-  			</form>
-         		<%} %>
-         	
+         
       </div>
    	<div class="box">
    		<div class="left"><div id="mapid"></div></div>
@@ -67,6 +55,7 @@
    					<select id="select"></select>
    				</div>
 				<div class="tab_select">
+					<button class="tab_button" onclick="setMode(event, 'redistricting')">Test</button>
 					<button class="tab_button" onclick="setMode(event, 'redistricting')">Auto Redistricting</button>
 	  				<button class="tab_button" onclick="setMode(event, 'manual')">Manual Editing</button>
 	  				<button class="tab_button" onclick="setMode(event, 'compare')">Comparison</button>
@@ -123,25 +112,9 @@
       <script  src="loadData.js"></script>
 	   <script  src="2016Data.js"></script>
 	   <script src="USStateBoundaries.js"></script>
-	   <script src="AvailableStateBoundaries.js"></script>
 	   <script  src="MinnesotaSyntax.js"></script>
-	   <script src="USStateBoundaries.js"></script>
 	   <script  src="mapScript.js"></script>
 	   <script  src="panels.js"></script>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 	   <script  src="loadMapScript.js"></script>
-=======
->>>>>>> parent of 6c08db4... geo process
-
 	   </body>
-	   
-
-=======
->>>>>>> parent of 6c08db4... geo process
-=======
->>>>>>> parent of 6c08db4... geo process
-
 </html>
