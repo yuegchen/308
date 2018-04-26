@@ -50,6 +50,10 @@ public class State {
 	public void setStateId(int id) {
 		this.stateId= id;
 	}
+		
+	public District[] getDistricts(){
+		return dList;
+	}
 	
 	
 }

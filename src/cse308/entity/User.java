@@ -1,5 +1,6 @@
 package cse308.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +16,7 @@ public class User {
 	private	String 	email;
 	private String 	uname;
 	private String 	address;
+	@Column( length = 1000000000)
 	private String 	password;
 	private String 	phone;
 

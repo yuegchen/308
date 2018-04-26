@@ -12,11 +12,15 @@ public class District {
 
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Id
+
 	private 	int 		districtId;
 	private 	int 		originalDistrictId;
 	private 	int[] 		movedIntoPrecinctList;//store precincts with their id
 	private 	int[] 		borderPrecinctList;
 	private 	District[] 	neighborDistricts;
+	
+	private 	int 		districtNameId;
+	private 	int[] 		precinctList;//store precincts with their id
 
 	public District( int did, int oDid, int[] inprecinctList, int[] borderPrecinctList) {
 		this.districtId				= 	did;
@@ -25,6 +29,12 @@ public class District {
 		this.borderPrecinctList		=	borderPrecinctList;
 	}
 
+	public District( int did, int districtNameId, int[] precinctList) {
+		this.districtId= did;
+		this.districtNameId = districtNameId;
+		this.precinctList= precinctList;
+	}
+	
 	public District() {
 		super();
 	}
@@ -66,6 +76,14 @@ public class District {
 
 	public void setODId(int id) {
 		this.originalDistrictId= id;
+	}
+	
+	public int getDistrictNameId(){
+		return districtNameId;
+	}
+	
+	public int[] getPrecinctList(){
+		return precinctList;
 	}
 	
 }
