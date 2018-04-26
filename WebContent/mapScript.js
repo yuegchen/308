@@ -341,7 +341,7 @@ info.update = function (props) {
 
 info.addTo(myMap);
 
- var resetControl = L.Control.extend({
+var resetControl = L.Control.extend({
      options: {
          position: 'topright'
      },
@@ -358,9 +358,44 @@ info.addTo(myMap);
 
          return container;
      }
+});
+
+var loadMapControl = L.Control.extend({
+     options: {
+         position: 'topright'
+     },
+
+     onAdd: function (map) {
+         // create the control container with a particular class name
+         var container = L.DomUtil.create('div', 'my-custom-control');
+         loadButton = L.DomUtil.create('button', 'load', container);
+         loadButton.textContent = "load map";
+         loadButton.onclick = function(){
+         	var jsonMapData = JSON.stringify(getMapData());
+         	$.ajax({ url:'loadMap',
+		    	type:'POST',
+		       	data: jsonMapData,
+		        dataType:'json',
+		        success:function(data){
+					$("#output").append( data );
+					//	window.location = 'testArrFour.jsp';
+				},
+				error: function() {
+					 $("#output").html("fail"); 
+				}
+			});
+
+         };
+         // ... initialize other DOM elements, add listeners, etc.
+
+         return container;
+     }
  });
 
+
+
  myMap.addControl(new resetControl());
+ myMap.addControl(new loadMapControl());
 // ==============================================================================
 // ===== END OF LEAFLET INITIALIZATION ==========================================
 // ==============================================================================
