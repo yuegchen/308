@@ -408,9 +408,13 @@ info.addTo(myMap);
          resetButton.textContent = "Reset";
          resetButton.onclick = function(){
 <<<<<<< HEAD
+<<<<<<< HEAD
 	 		resetState();
 			redraw();
 
+=======
+         	alert("Reset!");
+>>>>>>> parent of 6c08db4... geo process
 =======
          	alert("Reset!");
 >>>>>>> parent of 6c08db4... geo process

@@ -130,6 +130,7 @@
 	   <script  src="panels.js"></script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	   <script  src="loadMapScript.js"></script>
 =======
@@ -138,6 +139,8 @@
 	   </body>
 	   
 
+=======
+>>>>>>> parent of 6c08db4... geo process
 =======
 >>>>>>> parent of 6c08db4... geo process
 

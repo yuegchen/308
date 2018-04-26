@@ -19,7 +19,12 @@
 </servlet>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+<!-- Defines the path to access this Servlet -->
+>>>>>>> parent of 6c08db4... geo process
 =======
  
 <!-- Defines the path to access this Servlet -->
@@ -33,6 +38,7 @@
    <url-pattern>/logout</url-pattern>
 </servlet-mapping>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
  <servlet>
@@ -50,6 +56,8 @@
 >>>>>>> parent of 6c08db4... geo process
 =======
 >>>>>>> parent of 6c08db4... geo process
+=======
+>>>>>>> parent of 6c08db4... geo process
 <servlet>
    <servlet-name>register</servlet-name>
    <servlet-class>registerServlet</servlet-class>
@@ -57,6 +65,10 @@
  
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<!-- Defines the path to access this Servlet -->
+>>>>>>> parent of 6c08db4... geo process
 =======
 <!-- Defines the path to access this Servlet -->
 >>>>>>> parent of 6c08db4... geo process
@@ -79,6 +91,7 @@
 </servlet-mapping>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <servlet>
    <servlet-name>loadMap</servlet-name>
    <servlet-class>loadMapServlet</servlet-class>
@@ -89,6 +102,8 @@
    <url-pattern>/loadMap</url-pattern>
 </servlet-mapping>
 
+=======
+>>>>>>> parent of 6c08db4... geo process
 =======
 >>>>>>> parent of 6c08db4... geo process
 =======
