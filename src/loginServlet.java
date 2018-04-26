@@ -1,5 +1,7 @@
 import cse308.entity.*;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -10,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.DatatypeConverter;
+
 import com.google.gson.Gson;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -26,7 +30,8 @@ public class loginServlet extends HttpServlet {
 			EntityManagerFactory 	emfactory 		= 	Persistence.createEntityManagerFactory("Eclipselink_JPA");
 			EntityManager 			entitymanager 	= 	emfactory.createEntityManager();
 			User 					user 			= 	entitymanager.find(User.class, login);
-			if (user == null || !user.getPwd().equals(passwd)) {
+		
+			if (user == null || !user.getPwd().equals((Encrypt.encrypt(passwd)))) {
 				RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/loginFail.jsp");
 				dispatcher.forward(request, response);
 				write(response, "failed");
@@ -58,4 +63,5 @@ public class loginServlet extends HttpServlet {
 		}
 		response.getWriter().write(new Gson().toJson(toReturn));
 	}
+
 }
